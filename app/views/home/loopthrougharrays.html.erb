@@ -1,6 +1,10 @@
 
 <h1>List of Products</h1>
 
+<%# <%= debug @Products %>
+<%# <%= @Products.to_yaml %>
+<%# <%= simple_format @Products.to_yaml %>
+<%# <%= @Products.inspect %>
 <table class="table">
   <thead>
     <tr>
@@ -28,6 +32,7 @@
 
 <ul>
    <% @Products.each do |product| %>
+   <%# <%= debug @product %> 
       <li><%= product[:productName] %></li>
     <% end %>
 </ul>
