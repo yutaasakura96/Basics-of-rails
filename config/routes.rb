@@ -15,4 +15,8 @@ Rails.application.routes.draw do
   get "home/loopthrougharrays" => "home#loopthrougharrays"
 
   get "home/LoadUsers" => "home#LoadUsers"
+  get "home/LoadUsers2" => "home#LoadUsers2"
+
+  get "home/LoadUserDetails/:id" => "home#LoadUserDetails", as: "LoadUserDetails"
+  get "home/ShowUserDetails" => "home#ShowUserDetails"
 end
