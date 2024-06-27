@@ -71,4 +71,15 @@ class HomeController < ApplicationController
     @Products.push( {'productID':7,'productName':"AMD Ryzen 3930",'quantity':100,'unitInStock':50,'disContinued':'True','cost':9000})
     @Products.push( {'productID':8,'productName':"AMD Ryzen 3920",'quantity':100,'unitInStock':50,'disContinued':'True','cost':10000})
   end
+
+  def LoadUsers()
+    base_url = "https://fakestoreapi.com/users"
+    @users=CallRestAPI(base_url)
+  end
+
+  def CallRestAPI(base_url)
+    response=HTTParty.get(base_url)
+    return response.success? ? response : []
+  end
+
 end
